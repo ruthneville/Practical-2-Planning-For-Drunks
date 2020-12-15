@@ -15,18 +15,17 @@ Algorithm for the model:
 # Import libraries
 import csv # import software to import csv files
 import matplotlib.pyplot as mlp #import plotting software
-# import matplotlib.animation as animation # import plotting animation software
 from time import perf_counter # import software to count time 
 import drunkframework # import the Drunk class
 
-# Set up the drunks, these features can be changed
+# Set up the drunks
 # Create environment for drunks (the town for houses and the pub)
 town = []
 # create a list for drunks
 drunks = []
 # create a list for density
 density = []
-# Assign a number of drunks (1 for a test)
+# Assign a number of drunks (tried with 1 for a test)
 num_of_drunks = 25 
 # Assign number of iterations - the more iterations the more likely they are to find their way home.
 # It would be good to work out a method of getting them home without a set number of iterations?
@@ -61,6 +60,7 @@ f.close()
 # Open CSV file
 j = open(r'drunkplan.txt')
 
+# Read in the environment (density)
 reader = csv.reader(j, quoting = csv.QUOTE_NONNUMERIC)
 # Shift environment into a 2D list
 for row in reader:
@@ -77,13 +77,10 @@ for row in reader:
 # Close the file
 j.close()
 
-
 #Show the environment to make sure it has been read in properly (TEST)
 #mlp.imshow(town)
 #mlp.show()
 
-# Start the clock to see how long it takes for the code to run (drunks to get home)
-t1_start = perf_counter()
             
 """
 2. MAKE THE DRUNKS AND GIVE THEM HOUSES
@@ -102,6 +99,8 @@ for i in range(num_of_drunks):
 #    mlp.scatter(drunks[i].x, drunks[i].y)
 #mlp.show()
 
+# Start the clock to see how long it takes for the code to run (drunks to get home)
+t1_start = perf_counter()
 
 """
 # 3. MOVE THE DRUNKS AND DRAW THEIR MOVES TO TRACK DENSITY AND PLOT
@@ -152,5 +151,5 @@ with open('town.txt', 'w', newline='') as f:
     csvwriter = csv.writer(f, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)
     # For each row in density list
     for row in density:
-        # Wroite the row values into the density.txt file
+        # Write the row values into the density.txt file
         csvwriter.writerow(row)
