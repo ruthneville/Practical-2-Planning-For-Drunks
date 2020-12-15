@@ -7,7 +7,7 @@ A repository of code related to Practical 2 for the module GEOG5995M. The code i
  
 <h2> Contents </h2>
 
-<p>This project contains a model called DrunkModel and an associated drunk framework and a file to run the enviornment. The model is successful in that the drunks are able to find their way home from the pub using a random walk within a town environment. This zip file also includes a supporting document which outlines the intention of the software, the issues that came up during the development, the sources used, and the overall development process and testing. A license file and an UML are also included. </p>
+<p>This project contains a model called DrunkModel and an associated drunk framework and a file to run the environment. The model is successful in that the drunks are able to find their way home from the pub using a random walk within a town environment. This zip file also includes a supporting document which outlines the intention of the software, the issues that came up during the development, the sources used, and the overall development process and testing. A license file and an UML are also included. </p>
 
 <h2> How to run and what to expect </h2>
 <li> Copy the Drunk Model code into one workbook in Spyder and the drunk framework code into another, make sure that these are both saved in the same deictory. </li>
