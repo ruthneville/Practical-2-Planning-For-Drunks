@@ -2,7 +2,7 @@
 
 <h1> ReadME </h1>
 
-<h2> Introduction </h2><br>
+<h2> Introduction </h2>
 A repository of code related to Practical 2 for the module GEOG5995M. The code is written using Python 3 in the IDE Spyder. 
  
 <h2> Contents </h2>
